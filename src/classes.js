@@ -21,7 +21,10 @@ module.exports = {
 				"weapon_prof": ["Simple weapons", "Martial weapons"],
 				"tools": [""],
 				"saving_throw_prof": ["Strength", "Constitution"],
-				"skills": ["Choose two from either Animal Handling, Athletics, Intimidation, Nature, Perception, or Survival."]
+				"skills": {
+					"intro": "Choose two from ",
+					"list": ["animal handling", "athletics", "intimidation", "nature", "perception", "survival"]
+				}
 			},
 			"equipment": {
 				"welcome_msg": "Your character starts with the any of the following equipment, in addition to the equipment granted by your chosen background.",
@@ -34,7 +37,9 @@ module.exports = {
 			},
 			"class_spells": {},
 			"class_spellcasting_ability": {
-				"spell_save_dc": "", "spell_attack_mod": "", "spell_focus": ""
+				"spell_save_dc": "",
+				"spell_attack_mod": "",
+				"spell_focus": ""
 			},
 			"class_features": {
 				"rage": {
@@ -42,10 +47,17 @@ module.exports = {
 					"more_info": "If you are able to cast spells, you can't cast or concentrate on them while raging. Your rage ends early if you are knocked unconscious or if your turn ends and you havent attacked a hostile creature since your last turn or havent taken damage since then.",
 					"benefits": "You have advantage on Strength checks and Strength saving throws. When you make a melee weapon attack using Strength, you gain a bonus to the damage roll that increases based on your barbarian level. You have resistance to bludgeoning, piercing, and slashing damage.",
 					"rages": {
-						1: "2", 3: "3", 6: "4", 12: "5", 17: "6", 20: "unlimited"
+						1: "2",
+						3: "3",
+						6: "4",
+						12: "5",
+						17: "6",
+						20: "unlimited"
 					},
 					"rage_damage": {
-						1: "+2", 9: "+3", 16: "+4"
+						1: "+2",
+						9: "+3",
+						16: "+4"
 					},
 					"replenish": "Once you have used all your rage, which is based on your player level. You must finish a long rest before you can rage again."
 				},
@@ -106,25 +118,33 @@ module.exports = {
 			"persistent rage": "Beginning at 15th level, your rage is so fierce that it ends early only if you fall unconscious or if you choose to end it.",
 			"indomitable might": "Beginning at 18th level, if your total for a Strength check is less than your Strength score, you can use that score in place of the total.",
 			"primal champion": "At 20th level, you embody the power of the wilds. Your Strength and Constitution scores increase by 4. Your maximum for those scores is now 24."
-		}, "bard": {
+		},
+		"bard": {
 			"class_description": {
 				"shortDesc": "A story teller or musician using his wits, magic, and lore to get out of or avoid tight situations.",
 				"longDesc": "The bard uses music and magic to support and inspire the rest of the party. Bards can specialize in the College of Lore, which allows for a more versatile character who can learn some spells and become proficient in the player's choice of skills, or the College of Valor, which makes the bard more martial and combat-oriented, or a number of other directions based on their focus."
-			}, "class_hit_point": {
+			},
+			"class_hit_point": {
 				"hit_dice": "1d8",
 				"first_level": "8 plus your Constitution modifier.",
 				"higher_levels": "Based on average rolls, 5 plus your Constitution modifier."
-			}, "class_primary_ability": {
+			},
+			"class_primary_ability": {
 				"ability_scores": "Recommended to choose Charisma, followed by Dexterity as your highest ability scores.",
 				"background": "It is advised to take the entertainer background for your character.",
 				"starting_spells": "Alexa recommends you choose vicious mockery and dancing lights as your first cantrips. Regarding 1st-level spells, we recommend taking the charm person, detect magic, healing word, and thunderwave as your first spells."
-			}, "class_proficiencies": {
+			},
+			"class_proficiencies": {
 				"armor_prof": ["Light armor"],
 				"weapon_prof": ["Simple weapon", "hand crossbows", "longswords", "rapiers", "shortswords"],
 				"tools": ["Three musical instruments of your choice."],
 				"saving_throw_prof": ["Dexterity", "Charisma"],
-				"skills": ["You may choose any three skills of your choice to be proficient in."]
-			}, "equipment": {
+				"skills": {
+					"intro": "Choose three skills of your choice to be proficient in.",
+					"list": []
+				}
+			},
+			"equipment": {
 				"welcome_msg": "Your character starts with the any of the following equipment, in addition to the equipment granted by your chosen background.",
 				"starting_pack": "Leather armor and a dagger",
 				"weapons_1": "A rapier",
@@ -135,7 +155,8 @@ module.exports = {
 				"options_1": "A lute",
 				"options_2": "Any other musical instrument",
 				"skills": ["You may choose any three skills of your choice to be proficient in."]
-			}, "class_spells": {
+			},
+			"class_spells": {
 				"slot_levels": {
 					0: [1, "blade ward", "dancing lights", "friends", "light", "mage hand", "mending", "message", "minor illusion", "prestidigitation", "true strike", "vicious mockery"],
 					1: [1, "animal friendship", "bane", "charm person", "comprehend languages", "cure wounds", "detect magic", "disguise self", "dissonant whispers", "faerie fire", "feather fall", "healing word", "heroism", "identify", "illusory script", "longstrider", "silent image", "sleep", "speak with animals", "tashas hideous laughter", "thunderwave", "unseen servant"],
@@ -147,14 +168,20 @@ module.exports = {
 					7: [13, "etherealness", "forcecage", "mirage arcane", "mordenkainens magnificent mansion", "mordenkainens sword", "project image", "regenerate", "resurrection", "symbol", "teleport"],
 					8: [15, "dominate monster", "feeblemind", "glibness", "mind blank", "power word stun"],
 					9: [17, "foresight", "power word heal", "power word kill", "true polymorph"]
-				}, "spells_known": {
-					1: "", 2: ""
-				}, "cantrips_known": {}, "level_features": {}
-			}, "class_spellcasting_ability": {
+				},
+				"spells_known": {
+					1: "",
+					2: ""
+				},
+				"cantrips_known": {},
+				"level_features": {}
+			},
+			"class_spellcasting_ability": {
 				"spell_save_dc": "8 plus your proficiency bonus plus your Charisma modifier.",
 				"spell_attack_mod": "Your proficiency bonus plus your Charisma modifier.",
 				"spell_focus": "Musical instrument."
-			}, "class_features": {
+			},
+			"class_features": {
 				"bardic inspiration": {
 					"description": "You can inspire others through stirring words or music. To do so, you use a Bonus Action on your turn to choose one creature other than yourself within 60 feet of you who can hear you. That creature gains one Bardic Inspiration die, a d6.",
 					"benefits": "Once within the next 10 minutes, the creature can roll the die and add the number rolled to one ability check, Attack roll, or saving throw it makes.",
@@ -191,25 +218,33 @@ module.exports = {
 				"magical secrets": "By 10th level, you have plundered magical knowledge from a wide spectrum of disciplines. Choose two Spells from any class, including this one. A spell you choose must be of a level you can cast or a cantrip. You learn two additional Spells from any class at 14th level and again at 18th level.",
 				"superior inspiration": "At 20th level, when you roll initiative and have no uses of Bardic Inspiration left, you regain one use."
 			}
-		}, "cleric": {
+		},
+		"cleric": {
 			"class_description": {
 				"shortDesc": "A holy man devoted to a deity. capable of bolstering the party and heal their wounds, or laying low their enemies with divine wrath.",
 				"longDesc": "A priestly champion who wields divine magic in service of a higher power, d8, Wisdom & Charisma, light and medium armor, shields, simple weapons."
-			}, "class_hit_point": {
+			},
+			"class_hit_point": {
 				"hit_dice": "1d8",
 				"first_level": "8 plus your Constitution modifier.",
 				"higher_levels": "Based on average rolls, 5 plus your Constitution modifier."
-			}, "class_primary_ability": {
+			},
+			"class_primary_ability": {
 				"ability_scores": "Recommended to choose Wisdom, followed by Strength or Constitution as your highest ability scores.",
 				"background": "It is advised to take the acolyte background for your character.",
 				"starting_spells": "It is recommended to choose Guidance, Sacred Flame and Thaumaturgy as your first cantrips. If you dont have darkvision you should choose Light in place of one of the other cantrips. Regarding 1st-level spells, it is recommended that you take Cure Wounds, and Command as your first spells."
-			}, "class_proficiencies": {
+			},
+			"class_proficiencies": {
 				"armor_prof": ["light armor", "medium armor", "shields"],
 				"weapon_prof": ["All simple weapons"],
 				"tools": [""],
 				"saving_throw_prof": ["Wisdom", "Charisma"],
-				"skills": ["Choose two from History, Insight, Medicine, Persuasion, or Religion."]
-			}, "equipment": {
+				"skills": {
+					"intro": "Choose two from ",
+					"list": ["history", "insight", "medicine", "persuasion", "religion"]
+				}
+			},
+			"equipment": {
 				"welcome_msg": "Your character starts with the any of the following equipment, in addition to the equipment granted by your chosen background.",
 				"starting_pack": "",
 				"weapons_1": "A mace",
@@ -220,7 +255,8 @@ module.exports = {
 				"equipment_pack_2": "An explorers pack",
 				"extra_1": "A shield and a holy symbol",
 				"extra_2": ""
-			}, "class_spells": {
+			},
+			"class_spells": {
 				"slot_levels": {
 					0: [1, "guidance", "light", "mending", "resistance", "sacred flame", "spare the dying", "thaumaturgy"],
 					1: [1, "bane", "bless", "command", "create or destroy water", "cure wounds", "detect evil and good", "detect magic", "detect poison and disease", "guiding bolt", "healing word", "inflict wounds", "protection from evil and good", "purify food and drink", "sanctuary", "shield of faith"],
@@ -232,14 +268,20 @@ module.exports = {
 					7: [13, "conjure celestial", "divine word", "etherealness", "fire storm", "plane shift", "regenerate", "resurrection", "symbol"],
 					8: [15, "antimagic field", "control weather", "earthquake", "holy aura"],
 					9: [17, "astral projection", "gate", "mass heal", "true resurrection"]
-				}, "spells_known": {
-					1: "", 2: ""
-				}, "cantrips_known": {}, "level_features": {}
-			}, "class_spellcasting_ability": {
+				},
+				"spells_known": {
+					1: "",
+					2: ""
+				},
+				"cantrips_known": {},
+				"level_features": {}
+			},
+			"class_spellcasting_ability": {
 				"spell_save_dc": "8 plus your proficiency bonus plus your Wisdom modifier.",
 				"spell_attack_mod": "Your proficiency bonus plus your Wisdom modifier.",
 				"spell_focus": "Holy symbol."
-			}, "class_features": {
+			},
+			"class_features": {
 				"subclass": {
 					"subclass_paths": {
 						"subclass_description": "Choose one domain related to your deity: Knowledge, Life, Light, Nature, Tempest, Trickery, or War. Your choice could also simply be a matter of personal preference, the aspect of the deity that appeals to you most.",
@@ -376,7 +418,8 @@ module.exports = {
 							"avatar of battle": "At 17th level, you gain resistance to bludgeoning, piercing, and slashing damage from nonmagical weapons."
 						}
 					}
-				}, "channel divinity": {
+				},
+				"channel divinity": {
 					"description": "At 2nd level, you gain the ability to channel divine energy directly from your deity, using that energy to fuel magical effects. You start with two such effects: Turn Undead and an effect determined by your domain.",
 					"benefits": {
 						"Turn Undead": {
@@ -385,33 +428,49 @@ module.exports = {
 						}
 					},
 					"replenish": "A short or long rest. Beginning at 6th level you can use this twice, and beginning at 18th level you can use this three times between rests."
-				}, "class_feature_1": "", "class_feature_2": ""
-			}, "destroy undead": {
+				},
+				"class_feature_1": "",
+				"class_feature_2": ""
+			},
+			"destroy undead": {
 				"description": "Starting at 5th level, when an undead fails its saving throw against your Turn Undead feature, the creature is instantly destroyed if its challenge rating is at or below a certain threshold. To learn more, ask about the destroy undead table.",
 				"table": {
-					5: "1/2 or lower", 8: "1 or lower", 11: "2 or lower", 14: "3 or lower", 17: "4 or lower"
+					5: "1/2 or lower",
+					8: "1 or lower",
+					11: "2 or lower",
+					14: "3 or lower",
+					17: "4 or lower"
 				}
-			}, "ability_score_improvement": {
+			},
+			"ability_score_improvement": {
 				"levels": [4, 8, 12, 16, 19],
 				"description": "Increase one ability score by 2, or increase 2 ability scores by 1."
-			}, "divine intervention": {
+			},
+			"divine intervention": {
 				"description": "Beginning at 10th level, you can call on your deity to intervene on your behalf when your need is great. Imploring your deitys aid requires you to use your action, describe the assistance you seek and roll percentile dice.",
 				"more_info": "If you roll a number equal to or lower than your cleric level, your deity intervenes. Meaning if you are a level 10 cleric and roll between 1 and 10, this feature works. The D.M. chooses the nature of the intervention. At 20th level your call for intervention succeeds automatically, no roll required.",
 				"replenish": "If your deity intervenes, you cant use this feature again for 7 days. Otherwise, you must finish a long rest."
-			}, "class_specific_ability_2": "", "class_specific_ability_3": "", "class_specific_ability_4": ""
-		}, "druid": {
+			},
+			"class_specific_ability_2": "",
+			"class_specific_ability_3": "",
+			"class_specific_ability_4": ""
+		},
+		"druid": {
 			"class_description": {
 				"shortDesc": "A nomad devoted to the world and the powers of Nature. Capable of adopting the form of a beast for battle or utility. capable of bolstering the party and heal their wounds, or laying low their enemies with nature's wrath.",
 				"longDesc": "A priest of the Old Faith, wielding the powers of nature— moonlight and plant growth, fire and lightning—and adopting animal forms, d8, Intelligence & Wisdom, light and medium armor(non-metal), shields(non-metal), clubs, daggers, darts, javelins, maces, quarterstaffs, scimitars, sickles, slings, spears."
-			}, "class_hit_point": {
+			},
+			"class_hit_point": {
 				"hit_dice": "1d8",
 				"first_level": "8 plus your constitution modifier.",
 				"higher_levels": "Based on average rolls, 5 plus your constitution modifier."
-			}, "class_primary_ability": {
+			},
+			"class_primary_ability": {
 				"ability_scores": "Recommended to choose wisdom as your highest ability score, followed by constitution.",
 				"background": "It is advised to pick the hermit background.",
 				"starting_spells": ""
-			}, "class_proficiencies": {
+			},
+			"class_proficiencies": {
 				"armor_prof": ["light armor", "medium armor", "shields"],
 				"weapon_prof": ["Clubs", "daggers", "darts", "javelins", "maces", "quarterstaffs", "scimitars", "sickles", "slings", "spears"],
 				"tools": ["Herbalism kit"],
@@ -420,18 +479,20 @@ module.exports = {
 					"intro": "Choose two from ",
 					"list": ["arcana", "animal handling", "insight", "medicine", "nature", "perception", "religion", "survival"]
 				}
-			}, "equipment": {
+			},
+			"equipment": {
 				"welcome_msg": "Your character starts with the any of the following equipment, in addition to the equipment granted by your chosen background.",
 				"starting_pack": "",
 				"weapons_1": "A wooden shield",
 				"weapons_2": "Any simple weapon",
 				"weapons_3": "A scimitar",
-				"weapon_4": "Any simple melee weapon",
+				"weapons_4": "Any simple melee weapon",
 				"equipment_pack_1": "Explorers pack",
 				"equipment_pack_2": "",
 				"options_1": "Leather armor",
 				"options_2": "druidic focus"
-			}, "class_spells": {
+			},
+			"class_spells": {
 				"slot_levels": {
 					0: [1, "druidcraft", "guidance", "mending", "poison spray", "produce flame", "resistance", "shillelagh", "thorn whip"],
 					1: [1, "animal friendship", "charm person", "create or destroy water", "cure wounds", "detect magic", "detect poison and disease", "entangle", "faerie fire", "fog cloud", "goodberry", "healing word", "jump", "longstrider", "purify food and drink", "speak with animals", "thunderwave"],
@@ -443,16 +504,24 @@ module.exports = {
 					7: [13, "fire storm", "mirage arcane", "plane shift", "regenerate", "reverse gravity"],
 					8: [15, "animal shapes", "antipathy/sympathy", "sympathy", "antipathy", "control weather", "earthquake", "feeblemind", "sunburst", "tsunami"],
 					9: [17, "foresight", "shapechange", "storm of vengeance", "true resurrection"]
-				}, "spells_known": {
-					1: "", 2: ""
-				}, "cantrips_known": {}, "level_features": {}
-			}, "class_spellcasting_ability": {
+				},
+				"spells_known": {
+					1: "",
+					2: ""
+				},
+				"cantrips_known": {},
+				"level_features": {}
+			},
+			"class_spellcasting_ability": {
 				"spell_save_dc": "8 plus your proficiency bonus plus your wisdom modifier.",
 				"spell_attack_mod": "your proficiency bonus plus your wisdom modifier.",
 				"spell_focus": "druidic focus."
-			}, "class_features": {
+			},
+			"class_features": {
 				"main_class_feature": {
-					"description": "", "benefits": "", "replenish": ""
+					"description": "",
+					"benefits": "",
+					"replenish": ""
 				},
 				"class_feature_1": "",
 				"class_feature_2": "",
@@ -481,15 +550,18 @@ module.exports = {
 				"class_specific_ability_2": "",
 				"class_specific_ability_3": "",
 				"class_specific_ability_4": ""
-			}, "subclass": {
+			},
+			"subclass": {
 				"subclass_paths": {
-					"subclass_description": "", "subclass_type_1": {
+					"subclass_description": "",
+					"subclass_type_1": {
 						"subclass_1_description": "",
 						"subclass_benefit_1": "",
 						"subclass_benefit_2": "",
 						"subclass_benefit_3": "",
 						"subclass_benefit_4": ""
-					}, "subclass_type_2": {
+					},
+					"subclass_type_2": {
 						"subclass_2_description": "",
 						"subclass_benefit_1": "",
 						"subclass_benefit_2": "",
@@ -498,31 +570,45 @@ module.exports = {
 					}
 				}
 			}
-		}, "paladin": {
+		},
+		"paladin": {
 			"class_description": {
 				"shortDesc": "Nearly as skilled as the Fighter but bolsters his efforts with divine magic. through his devotion he gains special boons from his god.",
 				"longDesc": "A holy warrior bound to a sacred oath, d10, Strength, Wisdom & Charisma, all armor, shields, simple and martial weapons."
-			}, "class_hit_point": {
-				"hit_dice": "", "first_level": "", "higher_levels": ""
-			}, "class_primary_ability": {
-				"ability_scores": "", "background": "", "starting_spells": ""
-			}, "class_proficiencies": {
-				"armor_prof": ["armor_prof_1", "armor_prof_2", "armor_prof_3"],
-				"weapon_prof": ["wep_prof_1", "wep_prof_2", "wep_prof_3", "wep_prof_4", "wep_prof_5"],
+			},
+			"class_hit_point": {
+				"hit_dice": "1d10",
+				"first_level": "10 plus your constitution modifier.",
+				"higher_levels": "Based on average rolls, 6 plus your constitution modifier."
+			},
+			"class_primary_ability": {
+				"ability_scores": "Recommended to choose strength as your highest ability score, followed by charisma.",
+				"background": "It is advised to pick the noble background.",
+				"starting_spells": ""
+			},
+			"class_proficiencies": {
+				"armor_prof": ["All armor", "shields"],
+				"weapon_prof": ["Simple weapons", "martial weapons"],
 				"tools": [""],
-				"saving_throw_prof": ["ST_prof_1", "ST_prof_2"],
-				"skills": [""]
-			}, "equipment": {
+				"saving_throw_prof": ["Wisdom", "Charisma"],
+				"skills": {
+					"intro": "Choose two from ",
+					"list": ["athletics", "insight", "intimidation", "medicine", "persuasion", "religion"]
+				}
+			},
+			"equipment": {
 				"welcome_msg": "Your character starts with the any of the following equipment, in addition to the equipment granted by your chosen background.",
 				"starting_pack": "",
-				"weapons_1": "",
-				"weapons_2": "",
-				"weapons_3": "",
-				"equipment_pack_1": "",
-				"equipment_pack_2": "",
-				"options_1": "",
-				"options_2": ""
-			}, "class_spells": {
+				"weapons_1": "A martial weapon and a shield",
+				"weapons_2": "Two martial weapons",
+				"weapons_3": "Five javelins",
+				"weapons_4": "any simple melee weapon",
+				"equipment_pack_1": "Priest's pack",
+				"equipment_pack_2": "Explorer's pack",
+				"options_1": "Chain mail",
+				"options_2": "holy symbol"
+			},
+			"class_spells": {
 				"slot_levels": {
 					0: [],
 					1: [2, "bless", "command", "compelled duel", "cure wounds", "detect evil and good", "detect magic", "detect magic", "detect poison and disease", "divine favor", "heroism", "protection from evil and good", "purify food and drink", "searing smite", "shield of faith", "thunderous smite", "wrathful smite"],
@@ -534,15 +620,25 @@ module.exports = {
 					7: [],
 					8: [],
 					9: []
-				}, "spells_known": {
-					1: "", 2: ""
-				}, "cantrips_known": {}, "level_features": {}
-			}, "class_spellcasting_ability": {
-				"spell_save_dc": "", "spell_attack_mod": "", "spell_focus": ""
-			}, "class_features": {
+				},
+				"spells_known": {
+					1: "",
+					2: ""
+				},
+				"cantrips_known": {},
+				"level_features": {}
+			},
+			"class_spellcasting_ability": {
+				"spell_save_dc": "8 plus your proficiency bonus plus your charisma modifier.",
+				"spell_attack_mod": "your proficiency bonus plus your charisma modifier.",
+				"spell_focus": "holy symbol"
+			},
+			"class_features": {
 				"class_features": {
 					"main_class_feature": {
-						"description": "", "benefits": "", "replenish": ""
+						"description": "",
+						"benefits": "",
+						"replenish": ""
 					},
 					"class_feature_1": "",
 					"class_feature_2": "",
@@ -555,15 +651,18 @@ module.exports = {
 					"class_specific_ability_2": "",
 					"class_specific_ability_3": "",
 					"class_specific_ability_4": ""
-				}, "subclass": {
+				},
+				"subclass": {
 					"subclass_paths": {
-						"subclass_description": "", "subclass_type_1": {
+						"subclass_description": "",
+						"subclass_type_1": {
 							"subclass_1_description": "",
 							"subclass_benefit_1": "",
 							"subclass_benefit_2": "",
 							"subclass_benefit_3": "",
 							"subclass_benefit_4": ""
-						}, "subclass_type_2": {
+						},
+						"subclass_type_2": {
 							"subclass_2_description": "",
 							"subclass_benefit_1": "",
 							"subclass_benefit_2": "",
@@ -573,21 +672,30 @@ module.exports = {
 					}
 				}
 			}
-		}, "ranger": {
+		},
+		"ranger": {
 			"class_description": {
 				"shortDesc": "one who uses a unique blend of wilderness knowledge and martial ability to be a deadly hunter, with a bow, a pet or melee weapons.",
 				"longDesc": "A master of ranged combat, one with nature, d10, Dexterity & Strength, light and medium armor, shield, simple weapons, martial weapons."
-			}, "class_hit_point": {
-				"hit_dice": "", "first_level": "", "higher_levels": ""
-			}, "class_primary_ability": {
-				"ability_scores": "", "background": "", "starting_spells": ""
-			}, "class_proficiencies": {
+			},
+			"class_hit_point": {
+				"hit_dice": "",
+				"first_level": "",
+				"higher_levels": ""
+			},
+			"class_primary_ability": {
+				"ability_scores": "",
+				"background": "",
+				"starting_spells": ""
+			},
+			"class_proficiencies": {
 				"armor_prof": ["armor_prof_1", "armor_prof_2", "armor_prof_3"],
 				"weapon_prof": ["wep_prof_1", "wep_prof_2", "wep_prof_3", "wep_prof_4", "wep_prof_5"],
 				"tools": [""],
 				"saving_throw_prof": ["ST_prof_1", "ST_prof_2"],
 				"skills": [""]
-			}, "equipment": {
+			},
+			"equipment": {
 				"welcome_msg": "Your character starts with the any of the following equipment, in addition to the equipment granted by your chosen background.",
 				"starting_pack": "",
 				"weapons_1": "",
@@ -597,7 +705,8 @@ module.exports = {
 				"equipment_pack_2": "",
 				"options_1": "",
 				"options_2": ""
-			}, "class_spells": {
+			},
+			"class_spells": {
 				"slot_levels": {
 					0: [],
 					1: [2, "alarm", "animal friendship", "cure wounds", "detect magic", "detect poison and disease", "ensnaring strike", "fog cloud", "goodberry", "hail of thorns", "hunters mark", "jump", "longstrider", "speak with animals"],
@@ -609,15 +718,25 @@ module.exports = {
 					7: [],
 					8: [],
 					9: []
-				}, "spells_known": {
-					1: "", 2: ""
-				}, "cantrips_known": {}, "level_features": {}
-			}, "class_spellcasting_ability": {
-				"spell_save_dc": "", "spell_attack_mod": "", "spell_focus": ""
-			}, "class_features": {
+				},
+				"spells_known": {
+					1: "",
+					2: ""
+				},
+				"cantrips_known": {},
+				"level_features": {}
+			},
+			"class_spellcasting_ability": {
+				"spell_save_dc": "",
+				"spell_attack_mod": "",
+				"spell_focus": ""
+			},
+			"class_features": {
 				"class_features": {
 					"main_class_feature": {
-						"description": "", "benefits": "", "replenish": ""
+						"description": "",
+						"benefits": "",
+						"replenish": ""
 					},
 					"class_feature_1": "",
 					"class_feature_2": "",
@@ -630,15 +749,18 @@ module.exports = {
 					"class_specific_ability_2": "",
 					"class_specific_ability_3": "",
 					"class_specific_ability_4": ""
-				}, "subclass": {
+				},
+				"subclass": {
 					"subclass_paths": {
-						"subclass_description": "", "subclass_type_1": {
+						"subclass_description": "",
+						"subclass_type_1": {
 							"subclass_1_description": "",
 							"subclass_benefit_1": "",
 							"subclass_benefit_2": "",
 							"subclass_benefit_3": "",
 							"subclass_benefit_4": ""
-						}, "subclass_type_2": {
+						},
+						"subclass_type_2": {
 							"subclass_2_description": "",
 							"subclass_benefit_1": "",
 							"subclass_benefit_2": "",
@@ -648,21 +770,30 @@ module.exports = {
 					}
 				}
 			}
-		}, "sorcerer": {
+		},
+		"sorcerer": {
 			"class_description": {
 				"shortDesc": "a magic user who draws his power from within, summoning his innate magical power and bending it to his will.",
 				"longDesc": "A spellcaster who draws on inherent magic from a gift or bloodline, d6, Constitution & Charisma, daggers, darts, slings, quarterstaffs, light crossbows"
-			}, "class_hit_point": {
-				"hit_dice": "", "first_level": "", "higher_levels": ""
-			}, "class_primary_ability": {
-				"ability_scores": "", "background": "", "starting_spells": ""
-			}, "class_proficiencies": {
+			},
+			"class_hit_point": {
+				"hit_dice": "",
+				"first_level": "",
+				"higher_levels": ""
+			},
+			"class_primary_ability": {
+				"ability_scores": "",
+				"background": "",
+				"starting_spells": ""
+			},
+			"class_proficiencies": {
 				"armor_prof": ["armor_prof_1", "armor_prof_2", "armor_prof_3"],
 				"weapon_prof": ["wep_prof_1", "wep_prof_2", "wep_prof_3", "wep_prof_4", "wep_prof_5"],
 				"tools": [""],
 				"saving_throw_prof": ["ST_prof_1", "ST_prof_2"],
 				"skills": [""]
-			}, "equipment": {
+			},
+			"equipment": {
 				"welcome_msg": "Your character starts with the any of the following equipment, in addition to the equipment granted by your chosen background.",
 				"starting_pack": "",
 				"weapons_1": "",
@@ -672,7 +803,8 @@ module.exports = {
 				"equipment_pack_2": "",
 				"options_1": "",
 				"options_2": ""
-			}, "class_spells": {
+			},
+			"class_spells": {
 				"slot_levels": {
 					0: [0, "acid splash", "blade ward", "chill touch", "dancing lights", "fire bolt", "friends", "light", "mage hand", "mending", "message", "minor illusion", "poison spray", "prestidigitation", "ray of frost", "shocking grasp", "true strike"],
 					1: [1, "burning hands", "charm person", "chromatic orb", "color spray", "comprehend languages", "detect magic", "disguise self", "expeditious retreat", "false life", "feather fall", "fog cloud", "jump", "mage armor", "magic missile", "ray of sickness", "shield", "silent image", "sleep", "thunderwave", "witch bolt"],
@@ -684,15 +816,25 @@ module.exports = {
 					7: [13, "delayed blast fireball", "etherealness", "finger of death", "fire storm", "plane shift", "prismatic spray", "reverse gravity", "teleport"],
 					8: [15, "dominate monster", "earthquake", "incendiary cloud", "power word stun", "sunburst"],
 					9: [17, "gate", "meteor swarm", "power word kill", "time stop", "wish"]
-				}, "spells_known": {
-					1: "", 2: ""
-				}, "cantrips_known": {}, "player_level_features": {}
-			}, "class_spellcasting_ability": {
-				"spell_save_dc": "", "spell_attack_mod": "", "spell_focus": ""
-			}, "class_features": {
+				},
+				"spells_known": {
+					1: "",
+					2: ""
+				},
+				"cantrips_known": {},
+				"player_level_features": {}
+			},
+			"class_spellcasting_ability": {
+				"spell_save_dc": "",
+				"spell_attack_mod": "",
+				"spell_focus": ""
+			},
+			"class_features": {
 				"class_features": {
 					"main_class_feature": {
-						"description": "", "benefits": "", "replenish": ""
+						"description": "",
+						"benefits": "",
+						"replenish": ""
 					},
 					"class_feature_1": "",
 					"class_feature_2": "",
@@ -705,15 +847,18 @@ module.exports = {
 					"class_specific_ability_2": "",
 					"class_specific_ability_3": "",
 					"class_specific_ability_4": ""
-				}, "subclass": {
+				},
+				"subclass": {
 					"subclass_paths": {
-						"subclass_description": "", "subclass_type_1": {
+						"subclass_description": "",
+						"subclass_type_1": {
 							"subclass_1_description": "",
 							"subclass_benefit_1": "",
 							"subclass_benefit_2": "",
 							"subclass_benefit_3": "",
 							"subclass_benefit_4": ""
-						}, "subclass_type_2": {
+						},
+						"subclass_type_2": {
 							"subclass_2_description": "",
 							"subclass_benefit_1": "",
 							"subclass_benefit_2": "",
@@ -723,21 +868,30 @@ module.exports = {
 					}
 				}
 			}
-		}, "warlock": {
+		},
+		"warlock": {
 			"class_description": {
 				"shortDesc": "A caster who has formed a pact with a powerful entity, the warlock trades favors for boons and spells.",
 				"longDesc": "A wielder of magic that is derived from a bargain with an extraplanar entity, d8, Wisdom & Charisma, light armor, simple weapons."
-			}, "class_hit_point": {
-				"hit_dice": "", "first_level": "", "higher_levels": ""
-			}, "class_primary_ability": {
-				"ability_scores": "", "background": "", "starting_spells": ""
-			}, "class_proficiencies": {
+			},
+			"class_hit_point": {
+				"hit_dice": "",
+				"first_level": "",
+				"higher_levels": ""
+			},
+			"class_primary_ability": {
+				"ability_scores": "",
+				"background": "",
+				"starting_spells": ""
+			},
+			"class_proficiencies": {
 				"armor_prof": ["armor_prof_1", "armor_prof_2", "armor_prof_3"],
 				"weapon_prof": ["wep_prof_1", "wep_prof_2", "wep_prof_3", "wep_prof_4", "wep_prof_5"],
 				"tools": [""],
 				"saving_throw_prof": ["ST_prof_1", "ST_prof_2"],
 				"skills": [""]
-			}, "equipment": {
+			},
+			"equipment": {
 				"welcome_msg": "Your character starts with the any of the following equipment, in addition to the equipment granted by your chosen background.",
 				"starting_pack": "",
 				"weapons_1": "",
@@ -747,18 +901,39 @@ module.exports = {
 				"equipment_pack_2": "",
 				"options_1": "",
 				"options_2": ""
-			}, "class_spells": {
+			},
+			"class_spells": {
 				"slot_levels": {
-					0: [], 1: [], 2: [], 3: [], 4: [], 5: [], 6: [], 7: [], 8: [], 9: []
-				}, "spells_known": {
-					1: "", 2: ""
-				}, "cantrips_known": {}, "invocations_known": {}, "player_level_features": {}
-			}, "class_spellcasting_ability": {
-				"spell_save_dc": "", "spell_attack_mod": "", "spell_focus": ""
-			}, "class_features": {
+					0: [],
+					1: [],
+					2: [],
+					3: [],
+					4: [],
+					5: [],
+					6: [],
+					7: [],
+					8: [],
+					9: []
+				},
+				"spells_known": {
+					1: "",
+					2: ""
+				},
+				"cantrips_known": {},
+				"invocations_known": {},
+				"player_level_features": {}
+			},
+			"class_spellcasting_ability": {
+				"spell_save_dc": "",
+				"spell_attack_mod": "",
+				"spell_focus": ""
+			},
+			"class_features": {
 				"class_features": {
 					"main_class_feature": {
-						"description": "", "benefits": "", "replenish": ""
+						"description": "",
+						"benefits": "",
+						"replenish": ""
 					},
 					"class_feature_1": "",
 					"class_feature_2": "",
@@ -771,15 +946,18 @@ module.exports = {
 					"class_specific_ability_2": "",
 					"class_specific_ability_3": "",
 					"class_specific_ability_4": ""
-				}, "subclass": {
+				},
+				"subclass": {
 					"subclass_paths": {
-						"subclass_description": "", "subclass_type_1": {
+						"subclass_description": "",
+						"subclass_type_1": {
 							"subclass_1_description": "",
 							"subclass_benefit_1": "",
 							"subclass_benefit_2": "",
 							"subclass_benefit_3": "",
 							"subclass_benefit_4": ""
-						}, "subclass_type_2": {
+						},
+						"subclass_type_2": {
 							"subclass_2_description": "",
 							"subclass_benefit_1": "",
 							"subclass_benefit_2": "",
@@ -789,21 +967,30 @@ module.exports = {
 					}
 				}
 			}
-		}, "wizard": {
+		},
+		"wizard": {
 			"class_description": {
 				"shortDesc": "A keeper of arcane secrets and forgotten knowledge, the wizard manipulates magic and spells with cunning.",
 				"longDesc": "A scholarly magic-user capable of manipulating the structures of reality, d6, Intelligence & Wisdom, daggers, darts, slings, quarterstaffs, light crossbows."
-			}, "class_hit_point": {
-				"hit_dice": "", "first_level": "", "higher_levels": ""
-			}, "class_primary_ability": {
-				"ability_scores": "", "background": "", "starting_spells": ""
-			}, "class_proficiencies": {
+			},
+			"class_hit_point": {
+				"hit_dice": "",
+				"first_level": "",
+				"higher_levels": ""
+			},
+			"class_primary_ability": {
+				"ability_scores": "",
+				"background": "",
+				"starting_spells": ""
+			},
+			"class_proficiencies": {
 				"armor_prof": ["armor_prof_1", "armor_prof_2", "armor_prof_3"],
 				"weapon_prof": ["wep_prof_1", "wep_prof_2", "wep_prof_3", "wep_prof_4", "wep_prof_5"],
 				"tools": [""],
 				"saving_throw_prof": ["ST_prof_1", "ST_prof_2"],
 				"skills": [""]
-			}, "equipment": {
+			},
+			"equipment": {
 				"welcome_msg": "Your character starts with the any of the following equipment, in addition to the equipment granted by your chosen background.",
 				"starting_pack": "",
 				"weapons_1": "",
@@ -813,7 +1000,8 @@ module.exports = {
 				"equipment_pack_2": "",
 				"options_1": "",
 				"options_2": ""
-			}, "class_spells": {
+			},
+			"class_spells": {
 				"slot_levels": {
 					0: [1, "acid splash", "blade ward", "chill touch", "dancing lights", "fire bolt", "friends", "light", "mage hand", "mending", "message", "minor illusion", "poison spray", "prestidigitation", "ray of frost", "shocking grasp", "true strike"],
 					1: [1, "alarm", "burning hands", "charm person", "chromatic orb", "color spray", "comprehend languages", "detect magic", "disguise self", "expeditious retreat", "false life", "feather fall", "find familiar", "fog cloud", "grease", "identify", "illusory script", "jump", "longstrider", "mage armor", "magic missile", "protection from evil and good", "ray of sickness", "shield", "silent image", "sleep", "tashas hideous laughter", "tensers floating disk", "thunderwave", "unseen servant", "witch bolt"],
@@ -825,14 +1013,24 @@ module.exports = {
 					7: [13, "delayed blast fireball", "etherealness", "finger of death", "forcecage", "mirage arcane", "mordenkainens magnificent mansion", "mordenkainens sword", "plane shift", "prismatic spray", "project image", "reverse gravity", "sequester", "simulacrum", "symbol", "teleport"],
 					8: [15, "antimagic field", "antipathy/sympathy", "clone", "clone", "control weather", "demiplane", "dominate monster", "feeblemind", "incendiary cloud", "maze", "mind blank", "power word stun", "sunburst", "telepathy", "trap the soul"],
 					9: [17, "astral projection", "foresight", "gate", "imprisonment", "meteor swarm", "power word kill", "prismatic wall", "shapechange", "time stop", "true polymorph", "weird", "wish"]
-				}, "spells_known": {
-					1: "", 2: ""
-				}, "cantrips_known": {}, "level_features": {}
-			}, "class_spellcasting_ability": {
-				"spell_save_dc": "", "spell_attack_mod": "", "spell_focus": ""
-			}, "class_features": {
+				},
+				"spells_known": {
+					1: "",
+					2: ""
+				},
+				"cantrips_known": {},
+				"level_features": {}
+			},
+			"class_spellcasting_ability": {
+				"spell_save_dc": "",
+				"spell_attack_mod": "",
+				"spell_focus": ""
+			},
+			"class_features": {
 				"main_class_feature": {
-					"description": "", "benefits": "", "replenish": ""
+					"description": "",
+					"benefits": "",
+					"replenish": ""
 				},
 				"class_feature_1": "",
 				"class_feature_2": "",
@@ -845,15 +1043,18 @@ module.exports = {
 				"class_specific_ability_2": "",
 				"class_specific_ability_3": "",
 				"class_specific_ability_4": ""
-			}, "subclass": {
+			},
+			"subclass": {
 				"subclass_paths": {
-					"subclass_description": "", "subclass_type_1": {
+					"subclass_description": "",
+					"subclass_type_1": {
 						"subclass_1_description": "",
 						"subclass_benefit_1": "",
 						"subclass_benefit_2": "",
 						"subclass_benefit_3": "",
 						"subclass_benefit_4": ""
-					}, "subclass_type_2": {
+					},
+					"subclass_type_2": {
 						"subclass_2_description": "",
 						"subclass_benefit_1": "",
 						"subclass_benefit_2": "",
